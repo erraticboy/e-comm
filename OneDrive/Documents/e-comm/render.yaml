@@ -1,0 +1,21 @@
+# Render manifest for e-comm
+
+services:
+  - type: web
+    name: e-comm-server
+    env: node
+    region: oregon
+    branch: main
+    repo: https://github.com/erraticboy/e-comm
+    root: server
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    plan: free
+
+static_sites:
+  - name: e-comm-client
+    repo: https://github.com/erraticboy/e-comm
+    branch: main
+    buildCommand: npm install && npm run build
+    publishPath: dist
+    plan: free
