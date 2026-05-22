@@ -11,6 +11,27 @@ services:
     buildCommand: npm install && npm run build
     startCommand: npm run start
     plan: free
+    envVars:
+      - key: MONGODB_URI
+        value: ""
+      - key: STRIPE_SECRET_KEY
+        value: ""
+      - key: CLOUDINARY_CLOUD_NAME
+        value: ""
+      - key: CLOUDINARY_API_KEY
+        value: ""
+      - key: CLOUDINARY_API_SECRET
+        value: ""
+      - key: SMTP_HOST
+        value: ""
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        value: ""
+      - key: SMTP_PASS
+        value: ""
+      - key: JWT_SECRET
+        value: ""
 
 static_sites:
   - name: e-comm-client
