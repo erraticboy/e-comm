@@ -37,6 +37,7 @@ static_sites:
   - name: e-comm-client
     repo: https://github.com/erraticboy/e-comm
     branch: main
+    root: .
     buildCommand: npm install && npm run build
     publishPath: dist
     plan: free
